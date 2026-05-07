@@ -1,5 +1,6 @@
 import './globals.css';
 import { Fraunces, Schibsted_Grotesk, Geist_Mono } from 'next/font/google';
+import { AppShell } from '@/components/layout/AppShell';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -31,7 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${fraunces.variable} ${schibsted.variable} ${geistMono.variable}`}
     >
-      <body className="bg-bone text-charcoal min-h-screen">{children}</body>
+      <body className="bg-bone text-charcoal min-h-screen">
+        <AppShell>{children}</AppShell>
+      </body>
     </html>
   );
 }
