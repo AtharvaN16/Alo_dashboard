@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body { background: oklch(0.96 0.012 75); color: oklch(0.22 0.008 75); }
+
+body {
+  font-family: var(--font-schibsted), system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'cv11';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures for ledger/table numbers. Apply via .num utility class. */
+.num { font-variant-numeric: tabular-nums; }
+
+/* Hairline horizontal rule used between ledger rows and editorial blocks. */
+.hairline { background: oklch(0.88 0.012 75); height: 1px; width: 100%; }
+.hairline-v { background: oklch(0.88 0.012 75); width: 1px; align-self: stretch; }
