@@ -36,9 +36,8 @@ export function Topbar() {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-20 h-20 transition-colors duration-200 ease-out-quart',
-        scrolled
-          ? 'bg-surface border-b border-line shadow-sm'
-          : 'bg-bone border-b border-transparent',
+        'border-b border-line',
+        scrolled ? 'bg-surface shadow-sm' : 'bg-bone',
       )}
     >
       <div className="flex h-full items-center">
