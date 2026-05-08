@@ -5,13 +5,9 @@ import { DateRangeProvider } from './DateRangeContext';
 export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <DateRangeProvider>
-      <div className="min-h-screen">
-        <Sidebar />
-        <div className="ml-60">
-          <Topbar />
-          <main>{children}</main>
-        </div>
-      </div>
+      <Topbar />
+      <Sidebar />
+      <main className="ml-60 pt-20">{children}</main>
     </DateRangeProvider>
   );
 }

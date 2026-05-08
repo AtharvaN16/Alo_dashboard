@@ -17,12 +17,8 @@ const NAV = [
 export function Sidebar() {
   const pathname = usePathname();
   return (
-    <aside className="fixed inset-y-0 left-0 z-10 flex w-60 flex-col border-r border-line bg-bone">
-      <div className="px-6 py-8">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/alo-logo.svg" alt="Alo Yoga" className="h-8 w-auto" />
-      </div>
-      <nav className="mt-2 flex-1">
+    <aside className="fixed bottom-0 left-0 top-20 z-10 flex w-60 flex-col border-r border-line bg-bone">
+      <nav className="flex-1 pt-6">
         {NAV.map(item => {
           const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
           return (
