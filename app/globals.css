@@ -4,7 +4,7 @@
 
 :root { color-scheme: light; }
 
-html, body { background: oklch(0.96 0.012 75); color: oklch(0.22 0.008 75); }
+html, body { background: oklch(0.93 0.020 75); color: oklch(0.22 0.008 75); }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

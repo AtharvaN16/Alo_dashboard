@@ -33,7 +33,7 @@ export function Topbar() {
           size="sm"
         />
         <PillToggle label="Compare to prev period" checked={compare} onChange={setCompare} />
-        <div className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-2xs uppercase tracking-tracked text-graphite">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-xs uppercase tracking-tracked text-graphite">
           AY
         </div>
       </div>

@@ -39,7 +39,7 @@ export default function CompetitorsPage() {
       {/* Brand strip: 6 + 3 + 3 with hairlines */}
       <section className="grid grid-cols-12 divide-x divide-line border-y border-line px-10">
         <div className="col-span-6 py-8 pr-8">
-          <div className="text-2xs uppercase tracking-tracked text-stone">Alo Yoga</div>
+          <div className="text-xs uppercase tracking-tracked text-stone">Alo Yoga</div>
           <div className="num font-serif text-display-lg font-extralight leading-none text-charcoal">
             {compact(BRANDS.alo.sessions)}
           </div>
@@ -49,7 +49,7 @@ export default function CompetitorsPage() {
           </p>
         </div>
         <div className="col-span-3 px-6 py-8">
-          <div className="text-2xs uppercase tracking-tracked text-stone">Lululemon</div>
+          <div className="text-xs uppercase tracking-tracked text-stone">Lululemon</div>
           <div className="num font-serif text-display-md font-extralight leading-none text-charcoal">
             {compact(BRANDS.lulu.sessions)}
           </div>
@@ -58,7 +58,7 @@ export default function CompetitorsPage() {
           </div>
         </div>
         <div className="col-span-3 px-6 py-8">
-          <div className="text-2xs uppercase tracking-tracked text-stone">Gymshark</div>
+          <div className="text-xs uppercase tracking-tracked text-stone">Gymshark</div>
           <div className="num font-serif text-display-md font-extralight leading-none text-charcoal">
             {compact(BRANDS.gym.sessions)}
           </div>
@@ -77,7 +77,7 @@ export default function CompetitorsPage() {
       <section className="px-10 pb-10">
         <ChartCard title="Engagement Comparison" eyebrow="Per metric">
           <table className="w-full text-sm">
-            <thead className="text-2xs uppercase tracking-tracked text-stone">
+            <thead className="text-xs uppercase tracking-tracked text-stone">
               <tr>
                 <th className="pb-3 text-left">Metric</th>
                 <th className="pb-3 text-right">Alo</th>
@@ -109,7 +109,7 @@ export default function CompetitorsPage() {
           <div className="space-y-6">
             {social.map(group => (
               <div key={group.platform}>
-                <div className="pb-2 text-2xs uppercase tracking-tracked text-stone">
+                <div className="pb-2 text-xs uppercase tracking-tracked text-stone">
                   {PLATFORM_LABEL[group.platform]}
                 </div>
                 <HorizontalBarBlock
@@ -153,7 +153,7 @@ export default function CompetitorsPage() {
 
         <ChartCard title="Benchmark" eyebrow="vs industry average" className="col-span-8">
           <table className="w-full text-sm">
-            <thead className="text-2xs uppercase tracking-tracked text-stone">
+            <thead className="text-xs uppercase tracking-tracked text-stone">
               <tr>
                 <th className="pb-3 text-left">Metric</th>
                 <th className="pb-3 text-right">Alo</th>

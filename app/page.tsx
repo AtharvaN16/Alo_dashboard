@@ -132,7 +132,7 @@ export default function Overview() {
       <section className="grid grid-cols-12 gap-6 px-10 pb-12">
         <ChartCard title="Top Keywords" eyebrow="Sorted by volume" detailHref="/audience" className="col-span-8">
           <table className="w-full text-sm">
-            <thead className="text-2xs uppercase tracking-tracked text-stone">
+            <thead className="text-xs uppercase tracking-tracked text-stone">
               <tr>
                 <th className="pb-3 text-left">Keyword</th>
                 <th className="pb-3 text-left">Intent</th>
@@ -159,19 +159,19 @@ export default function Overview() {
 
         <div className="col-span-4">
           <div className="grid grid-cols-1 divide-y divide-line border-y border-line py-2">
-            <div className="py-5">
-              <div className="text-2xs uppercase tracking-tracked text-stone">Authority Score</div>
+            <div className="space-y-2 py-7">
+              <div className="text-sm uppercase tracking-tracked text-stone">Authority Score</div>
               <AuthorityScale score={BRANDS.alo.authorityScore} />
             </div>
-            <div className="py-5">
-              <div className="text-2xs uppercase tracking-tracked text-stone">Total Backlinks</div>
-              <div className="num font-serif text-display-md font-extralight text-charcoal">
+            <div className="space-y-2 py-7">
+              <div className="text-sm uppercase tracking-tracked text-stone">Total Backlinks</div>
+              <div className="num text-display-lg font-medium leading-none text-charcoal">
                 {compact(BRANDS.alo.backlinks)}
               </div>
             </div>
-            <div className="py-5">
-              <div className="text-2xs uppercase tracking-tracked text-stone">Referring Domains</div>
-              <div className="num font-serif text-display-md font-extralight text-charcoal">
+            <div className="space-y-2 py-7">
+              <div className="text-sm uppercase tracking-tracked text-stone">Referring Domains</div>
+              <div className="num text-display-lg font-medium leading-none text-charcoal">
                 {compact(BRANDS.alo.referringDomains)}
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function Overview() {
                     <div style={{ height: `${(row.male / total) * 100}%`, background: BRAND_COLORS.charcoal }} />
                     <div style={{ height: `${(row.nonbinary / total) * 100}%`, background: BRAND_COLORS.clay }} />
                   </div>
-                  <div className="text-2xs text-stone">{row.ageBracket}</div>
+                  <div className="text-xs text-stone">{row.ageBracket}</div>
                 </div>
               );
             })}

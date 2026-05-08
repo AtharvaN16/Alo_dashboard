@@ -9,7 +9,7 @@ exports[`FunnelStepDown > renders steps with values and continue rates 1`] = `
       class="flex items-baseline justify-between gap-4"
     >
       <div
-        class="text-2xs uppercase tracking-tracked text-stone"
+        class="text-xs uppercase tracking-tracked text-stone"
       >
         Sessions
       </div>
@@ -28,7 +28,7 @@ exports[`FunnelStepDown > renders steps with values and continue rates 1`] = `
       />
     </div>
     <div
-      class="pt-2 text-2xs text-graphite"
+      class="pt-2 text-xs text-graphite"
     >
       58.0%
        continue to 
@@ -40,7 +40,7 @@ exports[`FunnelStepDown > renders steps with values and continue rates 1`] = `
       class="flex items-baseline justify-between gap-4"
     >
       <div
-        class="text-2xs uppercase tracking-tracked text-stone"
+        class="text-xs uppercase tracking-tracked text-stone"
       >
         Product View
       </div>
@@ -59,7 +59,7 @@ exports[`FunnelStepDown > renders steps with values and continue rates 1`] = `
       />
     </div>
     <div
-      class="pt-2 text-2xs text-graphite"
+      class="pt-2 text-xs text-graphite"
     >
       22.0%
        continue to 
@@ -71,7 +71,7 @@ exports[`FunnelStepDown > renders steps with values and continue rates 1`] = `
       class="flex items-baseline justify-between gap-4"
     >
       <div
-        class="text-2xs uppercase tracking-tracked text-stone"
+        class="text-xs uppercase tracking-tracked text-stone"
       >
         Add to Cart
       </div>

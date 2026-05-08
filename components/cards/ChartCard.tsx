@@ -19,32 +19,32 @@ export function ChartCard({
   return (
     <section
       className={cn(
-        'group rounded-md border border-line bg-surface p-8 shadow-hairline',
+        'group rounded-lg border border-transparent bg-surface p-9 shadow-card',
         'transition-all duration-200 ease-out-quart',
-        'hover:border-stone hover:shadow-md',
+        'hover:border-line hover:shadow-card-hover',
         className,
       )}
     >
       <header className="flex items-start justify-between gap-4">
-        <div>
+        <div className="space-y-1.5">
           {eyebrow && (
-            <div className="text-2xs uppercase tracking-tracked text-stone">{eyebrow}</div>
+            <div className="text-xs uppercase tracking-tracked text-stone">{eyebrow}</div>
           )}
-          <h3 className="font-serif text-2xl font-extralight text-charcoal">{title}</h3>
+          <h3 className="text-3xl font-medium text-charcoal">{title}</h3>
         </div>
         <div className="flex items-center gap-3">
           {controls}
           {detailHref && (
             <Link
               href={detailHref}
-              className="inline-flex items-center gap-1 text-2xs uppercase tracking-tracked text-graphite transition-colors duration-200 ease-out-quart hover:text-charcoal"
+              className="inline-flex items-center gap-1 text-xs uppercase tracking-tracked text-graphite transition-colors duration-200 ease-out-quart hover:text-charcoal"
             >
-              View details <ArrowRight className="h-3 w-3" aria-hidden />
+              View details <ArrowRight className="h-3.5 w-3.5" aria-hidden />
             </Link>
           )}
         </div>
       </header>
-      <div className="mt-6">{children}</div>
+      <div className="mt-8">{children}</div>
     </section>
   );
 }

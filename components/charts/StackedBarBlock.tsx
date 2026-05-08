@@ -11,7 +11,7 @@ export function StackedBarBlock({
   return (
     <div className={cn('w-full', className)}>
       {label && (
-        <div className="pb-2 text-2xs uppercase tracking-tracked text-stone">{label}</div>
+        <div className="pb-2 text-xs uppercase tracking-tracked text-stone">{label}</div>
       )}
       <div className="flex h-3 w-full overflow-hidden rounded-sm">
         {stacks.map(s => (

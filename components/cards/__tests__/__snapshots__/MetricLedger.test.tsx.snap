@@ -5,10 +5,10 @@ exports[`MetricLedger > renders rows with values and deltas 1`] = `
   class="px-10"
 >
   <div
-    class="flex items-baseline justify-between gap-6 py-4 border-b border-line"
+    class="flex items-baseline justify-between gap-6 py-6 border-b border-line"
   >
     <dt
-      class="text-2xs uppercase tracking-tracked text-stone"
+      class="text-sm uppercase tracking-tracked text-stone"
     >
       Engaged Sessions
     </dt>
@@ -16,22 +16,44 @@ exports[`MetricLedger > renders rows with values and deltas 1`] = `
       class="text-right"
     >
       <div
-        class="num font-mono text-3xl text-charcoal"
+        class="num font-mono text-4xl font-medium text-charcoal"
       >
         2.7M
       </div>
       <div
-        class="text-xs text-sage-deep"
+        class="mt-1 inline-flex items-center gap-1 text-sm font-medium text-sage-deep"
       >
-        +22.1% vs prior
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-up h-3.5 w-3.5"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m5 12 7-7 7 7"
+          />
+          <path
+            d="M12 19V5"
+          />
+        </svg>
+        <span>
+          +22.1%
+        </span>
       </div>
     </dd>
   </div>
   <div
-    class="flex items-baseline justify-between gap-6 py-4"
+    class="flex items-baseline justify-between gap-6 py-6"
   >
     <dt
-      class="text-2xs uppercase tracking-tracked text-stone"
+      class="text-sm uppercase tracking-tracked text-stone"
     >
       Conversion Rate
     </dt>
@@ -39,14 +61,36 @@ exports[`MetricLedger > renders rows with values and deltas 1`] = `
       class="text-right"
     >
       <div
-        class="num font-mono text-3xl text-charcoal"
+        class="num font-mono text-4xl font-medium text-charcoal"
       >
         3.84%
       </div>
       <div
-        class="text-xs text-sage-deep"
+        class="mt-1 inline-flex items-center gap-1 text-sm font-medium text-sage-deep"
       >
-        +0.6pp
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-up h-3.5 w-3.5"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m5 12 7-7 7 7"
+          />
+          <path
+            d="M12 19V5"
+          />
+        </svg>
+        <span>
+          +0.6pp
+        </span>
       </div>
     </dd>
   </div>

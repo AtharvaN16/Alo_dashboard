@@ -7,7 +7,7 @@ export function ChartTooltip({ active, payload, label }: TooltipProps<number, st
   if (!active || !payload || payload.length === 0) return null;
   return (
     <div className="rounded-sm border border-line bg-cream px-3 py-2 text-xs">
-      <div className="text-2xs uppercase tracking-tracked text-stone">{label}</div>
+      <div className="text-xs uppercase tracking-tracked text-stone">{label}</div>
       {payload.map(p => (
         <div key={String(p.dataKey)} className="mt-1 flex items-center gap-3">
           <span

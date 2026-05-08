@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ArrowUp, ArrowDown } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { ChartCard } from '@/components/cards/ChartCard';
 import { CompetitorToggleStandalone } from '@/components/cards/CompetitorToggle';
@@ -44,23 +45,30 @@ export default function EngagementPage() {
       {/* Editorial ledger row of 4 KPIs, no cards */}
       <section className="grid grid-cols-4 divide-x divide-line border-y border-line px-10 py-2">
         {[
-          { label: 'Engagement Rate',  value: percent(BRANDS.alo.engagementRate), delta: '+2.1pp' },
-          { label: 'Avg Engagement Time', value: duration(184), delta: '+11s' },
-          { label: 'Bounce Rate',       value: percent(0.38),  delta: '-1.4pp' },
-          { label: 'Events / Session',  value: '8.4',          delta: '+0.6' },
-        ].map((m, i) => (
-          <div key={m.label} className={`px-6 py-6 ${i === 0 ? 'pl-0' : ''}`}>
-            <div className="text-2xs uppercase tracking-tracked text-stone">{m.label}</div>
-            <div className="num font-serif text-display-sm font-extralight text-charcoal">{m.value}</div>
-            <div className="text-xs text-sage-deep">{m.delta} vs prior</div>
-          </div>
-        ))}
+          { label: 'Engagement Rate',  value: percent(BRANDS.alo.engagementRate), delta: '+2.1pp', sign: 'up' as const },
+          { label: 'Avg Engagement Time', value: duration(184), delta: '+11s', sign: 'up' as const },
+          { label: 'Bounce Rate',       value: percent(0.38),  delta: '1.4pp', sign: 'down' as const },
+          { label: 'Events / Session',  value: '8.4',          delta: '+0.6', sign: 'up' as const },
+        ].map((m, i) => {
+          const Arrow = m.sign === 'up' ? ArrowUp : ArrowDown;
+          const tone = m.sign === 'up' ? 'text-sage-deep' : 'text-clay';
+          return (
+            <div key={m.label} className={`px-6 py-8 ${i === 0 ? 'pl-0' : ''}`}>
+              <div className="text-sm uppercase tracking-tracked text-stone">{m.label}</div>
+              <div className="num pt-3 text-display-md font-medium text-charcoal">{m.value}</div>
+              <div className={`pt-2 inline-flex items-center gap-1 text-sm font-medium ${tone}`}>
+                <Arrow className="h-4 w-4" aria-hidden />
+                {m.delta}
+              </div>
+            </div>
+          );
+        })}
       </section>
 
       <section className="grid grid-cols-12 gap-6 px-10 py-10">
         <ChartCard title="Top Engaged Pages" eyebrow="Sorted by sessions" className="col-span-7">
           <table className="w-full text-sm">
-            <thead className="text-2xs uppercase tracking-tracked text-stone">
+            <thead className="text-xs uppercase tracking-tracked text-stone">
               <tr>
                 <th className="pb-3 text-left">URL</th>
                 <th className="pb-3 text-right">Sessions</th>

@@ -1,7 +1,7 @@
 export const BRAND_COLORS = {
-  bone: 'oklch(0.96 0.012 75)',
-  surface: 'oklch(0.985 0.004 75)',
-  cream: 'oklch(0.93 0.018 70)',
+  bone: 'oklch(0.93 0.020 75)',
+  surface: 'oklch(0.995 0.003 75)',
+  cream: 'oklch(0.90 0.022 70)',
   charcoal: 'oklch(0.22 0.008 75)',
   graphite: 'oklch(0.38 0.008 75)',
   stone: 'oklch(0.62 0.012 70)',

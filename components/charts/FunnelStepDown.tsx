@@ -12,7 +12,7 @@ export function FunnelStepDown({ steps }: { steps: FunnelStep[] }) {
         return (
           <li key={s.label}>
             <div className="flex items-baseline justify-between gap-4">
-              <div className="text-2xs uppercase tracking-tracked text-stone">{s.label}</div>
+              <div className="text-xs uppercase tracking-tracked text-stone">{s.label}</div>
               <div className="num font-serif text-display-sm font-extralight text-charcoal">
                 {compact(s.value)}
               </div>
@@ -24,7 +24,7 @@ export function FunnelStepDown({ steps }: { steps: FunnelStep[] }) {
               />
             </div>
             {i < steps.length - 1 && (
-              <div className="pt-2 text-2xs text-graphite">
+              <div className="pt-2 text-xs text-graphite">
                 {percent(s.rateToNext)} continue to {steps[i + 1].label.toLowerCase()}
               </div>
             )}

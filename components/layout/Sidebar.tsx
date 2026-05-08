@@ -48,7 +48,7 @@ export function Sidebar() {
           );
         })}
       </nav>
-      <div className="px-6 py-6 text-2xs text-stone">
+      <div className="px-6 py-6 text-xs text-stone">
         Mock data. Refreshed 5 May 2026.
       </div>
     </aside>

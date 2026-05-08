@@ -5,9 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bone: 'oklch(0.96 0.012 75)',
-        surface: 'oklch(0.985 0.004 75)',
-        cream: 'oklch(0.93 0.018 70)',
+        bone: 'oklch(0.93 0.020 75)',
+        surface: 'oklch(0.995 0.003 75)',
+        cream: 'oklch(0.90 0.022 70)',
         charcoal: 'oklch(0.22 0.008 75)',
         graphite: 'oklch(0.38 0.008 75)',
         stone: 'oklch(0.62 0.012 70)',
@@ -32,7 +32,11 @@ const config: Config = {
       },
       letterSpacing: { tracked: '0.12em' },
       transitionTimingFunction: { 'out-quart': 'cubic-bezier(0.165, 0.84, 0.44, 1)' },
-      boxShadow: { hairline: '0 1px 2px oklch(0.22 0.008 75 / 0.06)' },
+      boxShadow: {
+        hairline: '0 1px 2px oklch(0.22 0.008 75 / 0.06)',
+        card: '0 1px 3px oklch(0.22 0.008 75 / 0.06), 0 4px 16px oklch(0.22 0.008 75 / 0.05)',
+        'card-hover': '0 2px 6px oklch(0.22 0.008 75 / 0.08), 0 12px 32px oklch(0.22 0.008 75 / 0.10)',
+      },
     },
   },
   plugins: [],

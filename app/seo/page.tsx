@@ -1,5 +1,6 @@
 'use client';
 
+import { ArrowUp } from 'lucide-react';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { ChartCard } from '@/components/cards/ChartCard';
 import { AreaChartBlock } from '@/components/charts/AreaChartBlock';
@@ -21,23 +22,27 @@ export default function SeoPage() {
 
       {/* Editorial three-stack at top, no card frame */}
       <section className="grid grid-cols-3 divide-x divide-line border-y border-line px-10 py-2">
-        <div className="px-6 py-8">
-          <div className="text-2xs uppercase tracking-tracked text-stone">Authority Score</div>
+        <div className="space-y-3 px-6 py-10">
+          <div className="text-sm uppercase tracking-tracked text-stone">Authority Score</div>
           <AuthorityScale score={b.authorityScore} />
         </div>
-        <div className="px-6 py-8">
-          <div className="text-2xs uppercase tracking-tracked text-stone">Total Backlinks</div>
-          <div className="num font-serif text-display-lg font-extralight leading-none text-charcoal">
+        <div className="space-y-3 px-6 py-10">
+          <div className="text-sm uppercase tracking-tracked text-stone">Total Backlinks</div>
+          <div className="num text-display-xl font-medium leading-none text-charcoal">
             {compact(b.backlinks)}
           </div>
-          <div className="pt-2 text-xs text-sage-deep">+18% YoY</div>
+          <div className="inline-flex items-center gap-1 text-sm font-medium text-sage-deep">
+            <ArrowUp className="h-4 w-4" aria-hidden /> 18% YoY
+          </div>
         </div>
-        <div className="px-6 py-8">
-          <div className="text-2xs uppercase tracking-tracked text-stone">Referring Domains</div>
-          <div className="num font-serif text-display-lg font-extralight leading-none text-charcoal">
+        <div className="space-y-3 px-6 py-10">
+          <div className="text-sm uppercase tracking-tracked text-stone">Referring Domains</div>
+          <div className="num text-display-xl font-medium leading-none text-charcoal">
             {compact(b.referringDomains)}
           </div>
-          <div className="pt-2 text-xs text-sage-deep">+9% YoY</div>
+          <div className="inline-flex items-center gap-1 text-sm font-medium text-sage-deep">
+            <ArrowUp className="h-4 w-4" aria-hidden /> 9% YoY
+          </div>
         </div>
       </section>
 
@@ -62,7 +67,7 @@ export default function SeoPage() {
       <section className="px-10 pb-16">
         <ChartCard title="Top Referring Domains" eyebrow="Sorted by authority">
           <table className="w-full text-sm">
-            <thead className="text-2xs uppercase tracking-tracked text-stone">
+            <thead className="text-xs uppercase tracking-tracked text-stone">
               <tr>
                 <th className="pb-3 text-left">Domain</th>
                 <th className="pb-3 text-right">Authority</th>

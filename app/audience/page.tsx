@@ -37,7 +37,7 @@ export default function AudiencePage() {
                     <div style={{ height: `${(row.male / total) * 100}%`, background: BRAND_COLORS.charcoal }} />
                     <div style={{ height: `${(row.nonbinary / total) * 100}%`, background: BRAND_COLORS.clay }} />
                   </div>
-                  <div className="text-2xs text-stone">{row.ageBracket}</div>
+                  <div className="text-xs text-stone">{row.ageBracket}</div>
                 </div>
               );
             })}
@@ -89,7 +89,7 @@ export default function AudiencePage() {
             <EmptyState message="No keywords match this filter." />
           ) : (
             <table className="w-full text-sm">
-              <thead className="text-2xs uppercase tracking-tracked text-stone">
+              <thead className="text-xs uppercase tracking-tracked text-stone">
                 <tr>
                   <th className="pb-3 text-left">Keyword</th>
                   <th className="pb-3 text-left">Intent</th>

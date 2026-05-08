@@ -73,9 +73,9 @@ export default function SocialPage() {
           { label: 'Avg Shares',      value: integer(social.metrics.avgShares) },
           { label: 'Engagement Rate', value: percent(social.metrics.engagementRate, 2) },
         ].map((m, i) => (
-          <div key={m.label} className={`px-6 py-6 ${i === 0 ? 'pl-0' : ''}`}>
-            <div className="text-2xs uppercase tracking-tracked text-stone">{m.label}</div>
-            <div className="num font-serif text-display-sm font-extralight text-charcoal">{m.value}</div>
+          <div key={m.label} className={`px-6 py-8 ${i === 0 ? 'pl-0' : ''}`}>
+            <div className="text-sm uppercase tracking-tracked text-stone">{m.label}</div>
+            <div className="num pt-3 text-display-md font-medium text-charcoal">{m.value}</div>
           </div>
         ))}
       </section>
@@ -87,11 +87,11 @@ export default function SocialPage() {
               const span = post.feature ? 'col-span-3 row-span-2 aspect-square' : 'col-span-3 aspect-[2/1]';
               return (
                 <div key={i} className={`flex flex-col justify-end border border-line bg-cream p-4 ${span}`}>
-                  <div className="text-2xs uppercase tracking-tracked text-stone">
+                  <div className="text-xs uppercase tracking-tracked text-stone">
                     {PLATFORM_LABEL[post.platform]}
                   </div>
                   <div className="mt-1 font-serif text-base text-charcoal">{post.caption}</div>
-                  <div className="mt-3 flex gap-4 text-2xs text-graphite num font-mono">
+                  <div className="mt-3 flex gap-4 text-xs text-graphite num font-mono">
                     <span>{compact(post.likes)} likes</span>
                     <span>{compact(post.comments)} cm</span>
                     <span>{compact(post.shares)} sh</span>
