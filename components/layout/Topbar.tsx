@@ -46,7 +46,7 @@ export function Topbar() {
           <img src="/alo-logo.svg" alt="Alo Yoga" className="h-12 w-auto" />
         </div>
         <div className="flex flex-1 items-center justify-between gap-6 pl-2 pr-10">
-          <h1 className="text-3xl font-bold tracking-tight text-charcoal">{title}</h1>
+          <h1 className="text-3xl font-light tracking-tight text-charcoal">{title}</h1>
           <div className="flex items-center gap-4">
             <PillSegmented
               options={RANGE_OPTIONS}
