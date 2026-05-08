@@ -19,7 +19,7 @@ export function ChartCard({
   return (
     <section
       className={cn(
-        'group rounded-lg border border-transparent bg-surface p-9 shadow-card',
+        'group rounded-lg border border-transparent bg-surface p-9',
         'transition-all duration-200 ease-out-quart',
         'hover:border-line hover:shadow-card-hover',
         className,

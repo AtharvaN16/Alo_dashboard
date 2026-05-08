@@ -12,7 +12,7 @@ import { engagedSessionsSeries } from '@/lib/mock-data/engagement';
 import { useDateRange } from '@/components/layout/DateRangeContext';
 import { sliceSeries } from '@/lib/date-range';
 import { BRAND_COLORS } from '@/lib/brand';
-import { compact, percent, duration, integer } from '@/lib/format';
+import { compact, percent, duration, integer, signedPercent } from '@/lib/format';
 import { BRANDS } from '@/lib/mock-data/story';
 
 export default function EngagementPage() {
@@ -22,11 +22,11 @@ export default function EngagementPage() {
 
   const heroSeries = compare
     ? [
-        { key: 'alo',  name: 'Alo Yoga',  color: BRAND_COLORS.sage, data: eng.engaged },
+        { key: 'alo',  name: 'Alo Yoga',  color: BRAND_COLORS.sage, data: eng.engaged.series },
         { key: 'lulu', name: 'Lululemon', color: BRAND_COLORS.lulu, data: sliceSeries(engagedSessionsSeries('lulu'), range) },
         { key: 'gym',  name: 'Gymshark',  color: BRAND_COLORS.gym,  data: sliceSeries(engagedSessionsSeries('gym'),  range) },
       ]
-    : [{ key: 'alo', name: 'Engaged Sessions', color: BRAND_COLORS.sage, data: eng.engaged }];
+    : [{ key: 'alo', name: 'Engaged Sessions', color: BRAND_COLORS.sage, data: eng.engaged.series }];
 
   return (
     <>
@@ -45,10 +45,10 @@ export default function EngagementPage() {
       {/* Editorial ledger row of 4 KPIs, no cards */}
       <section className="grid grid-cols-4 divide-x divide-line border-y border-line px-10 py-2">
         {[
-          { label: 'Engagement Rate',  value: percent(BRANDS.alo.engagementRate), delta: '+2.1pp', sign: 'up' as const },
-          { label: 'Avg Engagement Time', value: duration(184), delta: '+11s', sign: 'up' as const },
-          { label: 'Bounce Rate',       value: percent(0.38),  delta: '1.4pp', sign: 'down' as const },
-          { label: 'Events / Session',  value: '8.4',          delta: '+0.6', sign: 'up' as const },
+          { label: 'Engagement Rate', value: percent(eng.erate.avg), delta: signedPercent(eng.erate.delta), sign: (eng.erate.delta >= 0 ? 'up' : 'down') as 'up' | 'down' },
+          { label: 'Avg Engagement Time', value: duration(eng.time.avg), delta: signedPercent(eng.time.delta), sign: (eng.time.delta >= 0 ? 'up' : 'down') as 'up' | 'down' },
+          { label: 'Bounce Rate',  value: percent(eng.bounce.avg), delta: signedPercent(eng.bounce.delta), sign: (eng.bounce.delta <= 0 ? 'up' : 'down') as 'up' | 'down' },
+          { label: 'Events / Session', value: '8.4', delta: '+0.6', sign: 'up' as 'up' | 'down' },
         ].map((m, i) => {
           const Arrow = m.sign === 'up' ? ArrowUp : ArrowDown;
           const tone = m.sign === 'up' ? 'text-sage-deep' : 'text-clay';

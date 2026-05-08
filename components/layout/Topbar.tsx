@@ -23,8 +23,8 @@ export function Topbar() {
   const title = TITLES[pathname] ?? 'Overview';
 
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-bone/90 px-10 py-5 backdrop-blur-sm">
-      <h1 className="font-serif text-display-sm font-extralight text-charcoal">{title}</h1>
+    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-line bg-surface px-10 py-5">
+      <h1 className="text-display-sm font-bold tracking-tight text-charcoal">{title}</h1>
       <div className="flex items-center gap-4">
         <PillSegmented
           options={RANGE_OPTIONS}

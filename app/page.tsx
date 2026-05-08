@@ -31,10 +31,23 @@ export default function Overview() {
   const [trafficCompare, setTrafficCompare] = useState(false);
   const [socialCompare, setSocialCompare] = useState(false);
 
+  const engagedTotal = traffic.total * eng.erate.avg;
   const ledgerRows: LedgerRow[] = [
-    { label: 'Engaged Sessions', value: compact(BRANDS.alo.sessions * BRANDS.alo.engagementRate), delta: { sign: 'up', text: '+22.1% vs prior' } },
-    { label: 'Conversion Rate',  value: percent(BRANDS.alo.conversionRate, 2),                     delta: { sign: 'up', text: '+0.6pp vs prior' } },
-    { label: 'Total Backlinks',  value: compact(BRANDS.alo.backlinks),                              delta: { sign: 'up', text: '+4.2% vs prior' } },
+    {
+      label: 'Engaged Sessions',
+      value: compact(engagedTotal),
+      delta: { sign: eng.erate.delta >= 0 ? 'up' : 'down', text: signedPercent(eng.erate.delta) },
+    },
+    {
+      label: 'Conversion Rate',
+      value: percent(BRANDS.alo.conversionRate, 2),
+      delta: { sign: 'up', text: '+0.6pp' },
+    },
+    {
+      label: 'Total Backlinks',
+      value: compact(seo.backlinksEnd),
+      delta: { sign: seo.backlinksDelta >= 0 ? 'up' : 'down', text: signedPercent(seo.backlinksDelta) },
+    },
   ];
 
   const trafficSeriesProps = trafficCompare
@@ -67,9 +80,9 @@ export default function Overview() {
       <section className="grid grid-cols-12 gap-6 px-0 pb-12 pt-8">
         <div className="col-span-7">
           <EditorialLede
-            eyebrow="Organic sessions"
-            number={compact(BRANDS.alo.sessions)}
-            narrative={`up ${signedPercent(BRANDS.alo.yoyGrowth).slice(1)} from prior 30 days, led by men's vertical search.`}
+            eyebrow={`Organic sessions · ${range.label}`}
+            number={compact(traffic.total)}
+            narrative={`${traffic.delta >= 0 ? 'up' : 'down'} ${signedPercent(traffic.delta).replace(/^[+-]/, '')} versus the prior ${range.label.toLowerCase()} window. Men's vertical search continues to lead acquisition.`}
           />
         </div>
         <div className="col-span-5">
@@ -114,7 +127,7 @@ export default function Overview() {
           className="col-span-6"
         >
           <LineChartBlock
-            series={[{ key: 'erate', name: 'Engagement Rate', color: BRAND_COLORS.sage, data: eng.erate }]}
+            series={[{ key: 'erate', name: 'Engagement Rate', color: BRAND_COLORS.sage, data: eng.erate.series }]}
           />
         </ChartCard>
         <ChartCard
