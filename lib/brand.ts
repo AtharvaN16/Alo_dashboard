@@ -1,15 +1,16 @@
 export const BRAND_COLORS = {
   bone: 'oklch(0.96 0.012 75)',
+  surface: 'oklch(0.985 0.004 75)',
   cream: 'oklch(0.93 0.018 70)',
   charcoal: 'oklch(0.22 0.008 75)',
   graphite: 'oklch(0.38 0.008 75)',
   stone: 'oklch(0.62 0.012 70)',
-  sage: 'oklch(0.58 0.038 130)',
-  sageDeep: 'oklch(0.42 0.045 132)',
-  clay: 'oklch(0.55 0.085 50)',
+  sage: 'oklch(0.66 0.18 145)',
+  sageDeep: 'oklch(0.50 0.18 145)',
+  clay: 'oklch(0.62 0.18 35)',
   line: 'oklch(0.88 0.012 75)',
-  lulu: 'oklch(0.72 0.025 240)',
-  gym: 'oklch(0.25 0.005 75)',
+  lulu: 'oklch(0.60 0.22 27)',
+  gym: 'oklch(0.85 0.20 110)',
 } as const;
 
 export const TYPE_SCALE = {

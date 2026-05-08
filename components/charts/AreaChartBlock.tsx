@@ -34,11 +34,11 @@ export function AreaChartBlock({
   return (
     <div style={{ width: '100%', height }}>
       <ResponsiveContainer>
-        <AreaChart data={merged} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
+        <AreaChart data={merged} margin={{ top: 8, right: 8, left: 0, bottom: 24 }}>
           <defs>
             {series.map(s => (
               <linearGradient key={s.key} id={`fill-${s.key}`} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor={s.color} stopOpacity={0.18} />
+                <stop offset="0%" stopColor={s.color} stopOpacity={0.22} />
                 <stop offset="100%" stopColor={s.color} stopOpacity={0} />
               </linearGradient>
             ))}
@@ -49,6 +49,7 @@ export function AreaChartBlock({
             tick={{ fill: BRAND_COLORS.stone, fontSize: 11 }}
             axisLine={{ stroke: BRAND_COLORS.line }}
             tickLine={false}
+            tickMargin={10}
             minTickGap={48}
           />
           <YAxis
@@ -59,7 +60,12 @@ export function AreaChartBlock({
             width={48}
           />
           <Tooltip content={<ChartTooltip />} cursor={{ stroke: BRAND_COLORS.line }} />
-          <Legend wrapperStyle={{ fontSize: 12, color: BRAND_COLORS.graphite }} iconType="plainline" />
+          <Legend
+            wrapperStyle={{ fontSize: 12, color: BRAND_COLORS.graphite, paddingTop: 24 }}
+            iconType="plainline"
+            verticalAlign="bottom"
+            height={32}
+          />
           {series.map(s => (
             <Area
               key={s.key}

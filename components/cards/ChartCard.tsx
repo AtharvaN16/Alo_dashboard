@@ -19,9 +19,9 @@ export function ChartCard({
   return (
     <section
       className={cn(
-        'group rounded-md border border-line bg-bone p-8',
+        'group rounded-md border border-line bg-surface p-8 shadow-hairline',
         'transition-all duration-200 ease-out-quart',
-        'hover:border-stone hover:shadow-hairline',
+        'hover:border-stone hover:shadow-md',
         className,
       )}
     >

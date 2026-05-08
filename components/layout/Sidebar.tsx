@@ -19,9 +19,8 @@ export function Sidebar() {
   return (
     <aside className="fixed inset-y-0 left-0 z-10 flex w-60 flex-col border-r border-line bg-bone">
       <div className="px-6 py-8">
-        <span className="font-serif text-2xl font-extralight uppercase tracking-tracked text-charcoal">
-          Alo
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/alo-logo.svg" alt="Alo Yoga" className="h-8 w-auto" />
       </div>
       <nav className="mt-2 flex-1">
         {NAV.map(item => {

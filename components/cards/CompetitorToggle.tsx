@@ -10,7 +10,7 @@ type Props = {
 
 export function useCompetitorToggle(defaultOn = false) {
   const [on, setOn] = useState(defaultOn);
-  const node = <PillToggle label="vs Lulu / Gym" checked={on} onChange={setOn} />;
+  const node = <PillToggle label="Competition" checked={on} onChange={setOn} />;
   return { on, setOn, node };
 }
 
@@ -18,7 +18,7 @@ export function CompetitorToggleStandalone({ defaultOn = false, onChange }: Prop
   const [on, setOn] = useState(defaultOn);
   return (
     <PillToggle
-      label="vs Lulu / Gym"
+      label="Competition"
       checked={on}
       onChange={v => { setOn(v); onChange?.(v); }}
     />

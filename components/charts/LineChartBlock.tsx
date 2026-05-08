@@ -17,7 +17,7 @@ export type LineSeries = {
 };
 
 export function LineChartBlock({
-  series, height = 240,
+  series, height = 280,
 }: { series: LineSeries[]; height?: number }) {
   const merged = useMemo(() => {
     const byDate = new Map<string, Record<string, number | string>>();
@@ -34,13 +34,14 @@ export function LineChartBlock({
   return (
     <div style={{ width: '100%', height }}>
       <ResponsiveContainer>
-        <LineChart data={merged} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
+        <LineChart data={merged} margin={{ top: 8, right: 8, left: 0, bottom: 24 }}>
           <CartesianGrid stroke={BRAND_COLORS.line} vertical={false} />
           <XAxis
             dataKey="date"
             tick={{ fill: BRAND_COLORS.stone, fontSize: 11 }}
             axisLine={{ stroke: BRAND_COLORS.line }}
             tickLine={false}
+            tickMargin={10}
             minTickGap={48}
           />
           <YAxis
@@ -52,8 +53,10 @@ export function LineChartBlock({
           />
           <Tooltip content={<ChartTooltip />} cursor={{ stroke: BRAND_COLORS.line }} />
           <Legend
-            wrapperStyle={{ fontSize: 12, color: BRAND_COLORS.graphite }}
+            wrapperStyle={{ fontSize: 12, color: BRAND_COLORS.graphite, paddingTop: 24 }}
             iconType="plainline"
+            verticalAlign="bottom"
+            height={32}
           />
           {series.map(s => (
             <Line
