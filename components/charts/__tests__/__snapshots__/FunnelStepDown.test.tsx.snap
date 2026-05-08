@@ -1,0 +1,94 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FunnelStepDown > renders steps with values and continue rates 1`] = `
+<ol
+  class="space-y-5"
+>
+  <li>
+    <div
+      class="flex items-baseline justify-between gap-4"
+    >
+      <div
+        class="text-2xs uppercase tracking-tracked text-stone"
+      >
+        Sessions
+      </div>
+      <div
+        class="num font-serif text-display-sm font-extralight text-charcoal"
+      >
+        4.2M
+      </div>
+    </div>
+    <div
+      class="mt-1 h-px w-full bg-line"
+    >
+      <div
+        class="h-full bg-charcoal transition-[width] duration-400 ease-out-quart"
+        style="width: 100%;"
+      />
+    </div>
+    <div
+      class="pt-2 text-2xs text-graphite"
+    >
+      58.0%
+       continue to 
+      product view
+    </div>
+  </li>
+  <li>
+    <div
+      class="flex items-baseline justify-between gap-4"
+    >
+      <div
+        class="text-2xs uppercase tracking-tracked text-stone"
+      >
+        Product View
+      </div>
+      <div
+        class="num font-serif text-display-sm font-extralight text-charcoal"
+      >
+        2.4M
+      </div>
+    </div>
+    <div
+      class="mt-1 h-px w-full bg-line"
+    >
+      <div
+        class="h-full bg-charcoal transition-[width] duration-400 ease-out-quart"
+        style="width: 57.99999999999999%;"
+      />
+    </div>
+    <div
+      class="pt-2 text-2xs text-graphite"
+    >
+      22.0%
+       continue to 
+      add to cart
+    </div>
+  </li>
+  <li>
+    <div
+      class="flex items-baseline justify-between gap-4"
+    >
+      <div
+        class="text-2xs uppercase tracking-tracked text-stone"
+      >
+        Add to Cart
+      </div>
+      <div
+        class="num font-serif text-display-sm font-extralight text-charcoal"
+      >
+        536K
+      </div>
+    </div>
+    <div
+      class="mt-1 h-px w-full bg-line"
+    >
+      <div
+        class="h-full bg-charcoal transition-[width] duration-400 ease-out-quart"
+        style="width: 12.76%;"
+      />
+    </div>
+  </li>
+</ol>
+`;

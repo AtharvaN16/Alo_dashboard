@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EditorialLede > renders eyebrow, number, and narrative 1`] = `
+<article
+  class="px-10 pt-2"
+>
+  <div
+    class="text-2xs uppercase tracking-tracked text-stone"
+  >
+    Organic sessions
+  </div>
+  <div
+    class="font-serif text-display-xl font-extralight leading-none text-charcoal"
+  >
+    4.2M
+  </div>
+  <p
+    class="max-w-prose pt-4 text-base text-graphite"
+  >
+    up 18.4% from prior 30 days, led by men's vertical search.
+  </p>
+</article>
+`;

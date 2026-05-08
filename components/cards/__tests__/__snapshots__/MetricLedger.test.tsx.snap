@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MetricLedger > renders rows with values and deltas 1`] = `
+<dl
+  class="px-10"
+>
+  <div
+    class="flex items-baseline justify-between gap-6 py-4 border-b border-line"
+  >
+    <dt
+      class="text-2xs uppercase tracking-tracked text-stone"
+    >
+      Engaged Sessions
+    </dt>
+    <dd
+      class="text-right"
+    >
+      <div
+        class="num font-mono text-3xl text-charcoal"
+      >
+        2.7M
+      </div>
+      <div
+        class="text-xs text-sage-deep"
+      >
+        +22.1% vs prior
+      </div>
+    </dd>
+  </div>
+  <div
+    class="flex items-baseline justify-between gap-6 py-4"
+  >
+    <dt
+      class="text-2xs uppercase tracking-tracked text-stone"
+    >
+      Conversion Rate
+    </dt>
+    <dd
+      class="text-right"
+    >
+      <div
+        class="num font-mono text-3xl text-charcoal"
+      >
+        3.84%
+      </div>
+      <div
+        class="text-xs text-sage-deep"
+      >
+        +0.6pp
+      </div>
+    </dd>
+  </div>
+</dl>
+`;
