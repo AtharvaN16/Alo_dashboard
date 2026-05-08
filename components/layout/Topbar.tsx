@@ -43,7 +43,7 @@ export function Topbar() {
       <div className="flex h-full items-center">
         <div className="flex w-60 shrink-0 items-center px-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/alo-logo.svg" alt="Alo Yoga" className="h-8 w-auto" />
+          <img src="/alo-logo.svg" alt="Alo Yoga" className="h-12 w-auto" />
         </div>
         <div className="flex flex-1 items-center justify-between gap-6 pl-2 pr-10">
           <h1 className="text-3xl font-bold tracking-tight text-charcoal">{title}</h1>
